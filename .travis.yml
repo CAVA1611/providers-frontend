@@ -5,4 +5,9 @@ install:
   - npm install
 script:
   - npm test
-  
+  - npm run build
+deploy:
+  provider: heroku
+  app: fis2020-ui-v3
+  api_key:
+    secure: 3e84ad00-3679-466d-8761-3e6a29b4cc22
