@@ -118,7 +118,7 @@ class Providers extends React.Component{
         return(
             <div>
                 <Alert message={this.state.errorInfo} onClose={this.handleCloseError}/>
-                <table class="table">
+                <table className="table">
                 <thead>
                     <tr>
                     <th>CIF</th>
@@ -130,6 +130,7 @@ class Providers extends React.Component{
                     <th>&nbsp;</th>
                     </tr>
                 </thead>
+                <tbody>
                 <NewProvider onAddProvider={this.addProvider}/>
                     {this.state.providers.map((provider) =>
                     ! this.state.isEditing[provider.name] ?
@@ -144,7 +145,7 @@ class Providers extends React.Component{
                     )}
 
 
-
+                    </tbody>            
         </table>
         </div>
         );
