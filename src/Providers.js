@@ -3,20 +3,36 @@ import Provider from './Provider.js';
 import Alert from './Alert.js';
 import NewProvider from './NewProvider.js';
 import EditProvider from './EditProvider.js';
-
+import ProviderApi from './ProvidersApi';
 
 class Providers extends React.Component{
     constructor(props){
         super(props);
         this.state = {
             errorInfo: null,
-            providers: this.props.providers,
+            providers: [],
             isEditing: {}
         }
         this.handleEdit = this.handleEdit.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
         this.handleCloseError = this.handleCloseError.bind(this);
         this.addProvider = this.addProvider.bind(this);
+    }
+
+    componentDidMount() {
+        ProviderApi.getAllProviders()
+        .then(
+            (result) => {
+                this.setState({
+                    providers: result
+                })
+            },
+            (error) => {
+                this.setState ({
+                    errorInfo: 'Problem witch conetion to server'
+                })
+            }
+        )
     }
 
     handleEdit(provider){
