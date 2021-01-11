@@ -15,7 +15,6 @@ class NewProvider extends React.Component {
         this.setState({
             [name]: value
         });
-
     }
 
 
@@ -26,8 +25,6 @@ class NewProvider extends React.Component {
         });
 
     }
-
-
 
     render() {
         return(
@@ -41,10 +38,7 @@ class NewProvider extends React.Component {
                 <td><button className="btn btn-primary" onClick={this.clickAdd}>Add Provider</button></td>
             </tr>
         );
-
     }
-
-
 }
 
 export default NewProvider;

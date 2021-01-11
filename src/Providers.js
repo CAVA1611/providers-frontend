@@ -28,7 +28,7 @@ class Providers extends React.Component{
                 })
             },
             (error) => {
-                this.setState ({
+                this.setState({
                     errorInfo: 'Problem witch conetion to server'
                 })
             }
@@ -84,7 +84,6 @@ class Providers extends React.Component{
             }
 
         });
-
     }
 
     handleCloseError(){
@@ -108,10 +107,6 @@ class Providers extends React.Component{
             });
         });
     }
-
-
-
-
 
     render(){
         return(
@@ -142,8 +137,6 @@ class Providers extends React.Component{
                     onChange={this.handleChange.bind(this, provider.name)}
                     onSave={this.handleSave.bind(this, provider.name)}/>
                     )}
-
-
                     </tbody>            
         </table>
         </div>

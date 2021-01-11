@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
     <h1>PROVIDERS INFO</h1>
-    <Providers />
+    <Providers/>
     </div>
   );
 }

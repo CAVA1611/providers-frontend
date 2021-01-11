@@ -19,5 +19,4 @@ function Provider(props){
     );
 }
 
-
 export default Provider;

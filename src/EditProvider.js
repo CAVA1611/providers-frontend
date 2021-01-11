@@ -16,8 +16,6 @@ function EditProvider(props) {
                 <button className="btn btn-primary" onClick={() => props.onSave(props.provider)} >Save</button>
                 <button className="btn btn-primary" onClick={() => props.onCancel(props.provider)}>Cancel</button>
             </td>
-
-
         </tr>
     )
 
