@@ -12,7 +12,7 @@ class Providers extends React.Component{
             errorInfo: null,
             providers: [],
             isEditing: {}
-        }
+        };
         this.handleEdit = this.handleEdit.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
         this.handleCloseError = this.handleCloseError.bind(this);
@@ -42,9 +42,9 @@ class Providers extends React.Component{
     }
 
     handleDelete(provider){
-        this.setState(prevState => {
+        this.setState(prevState => ({
             providers: prevState.providers.filter((c) => c.name !== provider.name)
-        })
+        }))
 
     }
 
@@ -98,7 +98,7 @@ class Providers extends React.Component{
     addProvider(provider) {
         this.setState(prevState => {
             const providers = prevState.providers;
-            if(!providers.find(c=> c.name === provider.name)) {
+            if(! providers.find(c=> c.name === provider.name)) {
                 return({
                     providers: [...prevState.providers, provider]
                 });
@@ -114,7 +114,6 @@ class Providers extends React.Component{
 
 
     render(){
-    
         return(
             <div>
                 <Alert message={this.state.errorInfo} onClose={this.handleCloseError}/>
